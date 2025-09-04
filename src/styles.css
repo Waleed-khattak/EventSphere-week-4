@@ -1,0 +1,312 @@
+/* Hero */
+.hero {
+  padding: 120px 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 60%);
+}
+
+@media screen and (max-width: 700px) {
+  .hero{
+    padding-top: 60px;
+  }
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-text .display {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.05;
+  margin: 0;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: .6rem 1rem;
+  border-radius: 9px;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+}
+
+.btn:hover {
+  transform: translateY(-2px); 
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border: none;
+}
+
+.hero-3d {
+  height: 300px;
+  border-radius: var(--radius, 20px); /* fallback radius */
+  background: rgba(255, 255, 255, 0.05); /* subtle glass */
+  backdrop-filter: blur(12px); /* glassmorphism blur */
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 
+    8px 8px 24px rgba(0, 0, 0, 0.06),   /* soft neumorphic shadow */
+    -8px -8px 24px rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-position: center;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-3d:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    12px 12px 30px rgba(0, 0, 0, 0.08),
+    -12px -12px 30px rgba(255, 255, 255, 0.1);
+}
+
+
+/* Sections */
+.section {
+  padding: 30px 0
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Search */
+.search input {
+  width: min(420px, 100%);
+  width: 327px;
+  padding: .8rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  outline: none
+}
+
+.search input:focus {
+  border-color: rgba(139, 92, 246, 0.6);
+}
+
+/* Cards */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 980px) {
+  .grid-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255  , 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  cursor: pointer;
+}
+
+.card-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  margin: .25rem 0;
+  margin-bottom: 15px;
+}
+
+.card-actions {
+  margin-top: 15px;
+}
+
+
+.card-desc{
+  margin-top: 15px;
+}
+
+/* Details */
+.detail {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.banner {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-top: 17px;
+}
+
+.alert.success {
+  margin-top: 10px;
+  padding: 10px;
+  background: #e6ffed;
+  color: #0a8a3a;
+  border: 1px solid #0a8a3a;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .banner{
+    height: 40vh;
+  }
+}
+
+.detail-body {
+  display: grid;
+  gap: .5rem;
+}
+
+.map-wrap {
+  margin-top: 1rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.map-wrap iframe {
+  width: 100%;
+  height: 380px;
+  border: 0;
+  display: block;
+}
+
+/* Forms */
+.form {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05); /* subtle glass effect */
+  backdrop-filter: blur(12px); /* glassmorphism blur */
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05), /* shadow for neumorphism */
+              4px 4px 12px rgba(0, 0, 0, 0.05), 
+              -4px -4px 12px rgba(255, 255, 255, 0.08);
+}
+
+/* 2-column grid */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* Inputs and Textarea */
+input,
+textarea {
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  outline: none;
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif;
+
+  /* Neumorphism subtle inset effect */
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.08),
+              inset -2px -2px 6px rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(6, 182, 212, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.25), /* glow effect */
+              inset 2px 2px 6px rgba(0, 0, 0, 0.08),
+              inset -2px -2px 6px rgba(255, 255, 255, 0.08);
+}
+
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  z-index: 60;
+}
+
+.modal-card {
+  background: var(--bg-soft);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 1.25rem;
+  max-width: 640px;
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+
+.close {
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  border: none;
+  background: transparent;
+  font-size: 26px;
+  color: var(--muted);
+  cursor: pointer;
+}
