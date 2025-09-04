@@ -2,7 +2,7 @@
 
 This is my week#4 task of my internship under Inernship Pakistan. A fully functional responsive events showcase looks awesome website EventSphere built with React, React Router, Framer Motion and React Three Fiber. EventSphere! Upcoming events website. This week’s tasks focused on developing the website and making it more interactive, modern, functional and user-friendly.
 
-🌐 
+🌐 eventsphere-week-4.netlify.app
 
 ## Features
 - Homepage with hero banner “Discover Upcoming Events”, sticky navbar, and search.
